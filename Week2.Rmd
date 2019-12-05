@@ -1,0 +1,23 @@
+---
+title: "Week 2"
+author: "Charlie Bayne"
+date: "12/4/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(leaflet)
+library(maps)
+mapStates = map("state", fill = TRUE, plot = FALSE)
+
+leaflet(data = mapStates) %>% 
+    leaflet::addTiles() %>% 
+    addWMSTiles( "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
+    layers = "nexrad-n0r-900913",
+    options = WMSTileOptions(format = "image/png", transparent = TRUE),
+    attribution = "Weather data © 2012 IEM Nexrad")
+```
