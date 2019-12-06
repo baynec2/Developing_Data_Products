@@ -1,0 +1,20 @@
+---
+title: "Week3"
+author: "Charlie Bayne"
+date: "12/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(plotly)
+
+data = tibble::rownames_to_column(mtcars,"car")
+
+
+plot_ly(data, y= ~reorder(car,mpg), x= ~mpg, type = "bar")
+```
+
