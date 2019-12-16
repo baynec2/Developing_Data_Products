@@ -1,0 +1,12 @@
+name: Wordflock
+title: Wordflock
+username:
+account: charliebayne
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1596012
+bundleId: 2670667
+url: https://charliebayne.shinyapps.io/Wordflock/
+when: 1576466677.19363
+asMultiple: FALSE
+asStatic: FALSE
